@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  flask-celery:
+    build: .
+    ports:
+      - "5000:5000"
+  redis:
+    image: "redis"
+  celery:
+    build: .
+    command: celery -A tasks/task_test worker --loglevel=info
