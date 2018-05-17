@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from tasks import task_test
-from celery.result import AsyncResult
+# from celery.result import AsyncResult
 
 import time
 
